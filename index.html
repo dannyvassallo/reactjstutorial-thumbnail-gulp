@@ -4,6 +4,12 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-5 target">			
+			</div>
+		</div>
+	</div>
 </body>
 
 <script type="text/jsx">
@@ -25,5 +31,5 @@
 	var element = React.createElement(Badge, options);
 
 	// React, after you render this class, please place it in my body tag
-	React.render(element, document.body);
+	React.render(element, document.querySelector('.target'));
 </script>
