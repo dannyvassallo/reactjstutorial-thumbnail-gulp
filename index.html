@@ -25,10 +25,10 @@
 	var Thumbnail = React.createClass({
 		render: function(){
 			return <div className="thumbnail">
-				<img src="..." alt="..." />
+				<img src={this.props.imageUrl}/>
 				<div className="caption">
-			        <h3>Thumbnail label</h3>
-			        <p>...</p>
+			        <h3>{this.props.header}</h3>
+			        <p>{this.props.description}</p>
 			        <p>
 				        <a href="#" className="btn btn-primary" role="button">Button</a>
 				        <a href="#" className="btn btn-default" role="button">Button</a>
@@ -40,11 +40,14 @@
 
 	var options = {
 		title: 'Inbox',
-		number: 32
+		number: 32,
+		header: 'Learn React',
+		description: 'React is a fantastic new library for making fast, dynamic pages. React is a fantastic new library for making fast, dynamic pages.',
+		imageUrl: 'http://formatjs.io/img/react.svg'
 	};
 
 	// React, please render this class
-	var element = React.createElement(Thumbnail);
+	var element = React.createElement(Thumbnail, options);
 
 	// React, after you render this class, please place it in my body tag
 	React.render(element, document.querySelector('.target'));
